@@ -1,0 +1,65 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: sammy
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: wpbase
+    container_name: wpbase-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - wpbase
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_DATABASE: wpbase-dbname
+      WORDPRESS_DB_USER: wpbase-user
+      WORDPRESS_DB_PASSWORD: wpbase-password
+  db:
+    image: mysql:5.7
+    container_name: wpbase-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: wpbase-dbname
+      MYSQL_ROOT_PASSWORD: wpbase-password
+      MYSQL_PASSWORD: wpbase-password
+      MYSQL_USER: wpbase-user
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    networks:
+      - wpbase
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      PMA_USER: wpbase-user
+      PMA_PASSWORD: wpbase-password
+      PMA_HOST: db:3306
+    depends_on:
+      - db
+    networks:
+      - wpbase
+  nginx:
+    image: nginx:1.17-alpine
+    container_name: wpbase-nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d
+    networks:
+      - wpbase
+networks:
+  wpbase:
+    driver: bridge
