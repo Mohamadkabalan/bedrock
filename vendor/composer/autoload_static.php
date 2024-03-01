@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf490dc0e996e7236a6407851f494d012
+class ComposerStaticInit4bd367d0af823009ad96fac2d8aa91a1
 {
     public static $files = array (
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
@@ -63,7 +63,7 @@ class ComposerStaticInitf490dc0e996e7236a6407851f494d012
         ),
         'Timber\\' => 
         array (
-            0 => __DIR__ . '/..' . '/timber/timber/lib',
+            0 => __DIR__ . '/..' . '/timber/timber/src',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -115,10 +115,6 @@ class ComposerStaticInitf490dc0e996e7236a6407851f494d012
         ),
     );
 
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/twig/cache-extension/lib',
-    );
-
     public static $prefixesPsr0 = array (
         'T' => 
         array (
@@ -127,17 +123,9 @@ class ComposerStaticInitf490dc0e996e7236a6407851f494d012
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
             ),
         ),
-        'R' => 
-        array (
-            'Routes' => 
-            array (
-                0 => __DIR__ . '/..' . '/upstatement/routes',
-            ),
-        ),
     );
 
     public static $classMap = array (
-        'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Composer\\Installers\\AglInstaller' => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers/AglInstaller.php',
@@ -292,83 +280,79 @@ class ComposerStaticInitf490dc0e996e7236a6407851f494d012
         'Roots\\WPConfig\\Config' => __DIR__ . '/..' . '/roots/wp-config/src/Config.php',
         'Roots\\WPConfig\\Exceptions\\ConstantAlreadyDefinedException' => __DIR__ . '/..' . '/roots/wp-config/src/Exceptions/ConstantAlreadyDefinedException.php',
         'Roots\\WPConfig\\Exceptions\\UndefinedConfigKeyException' => __DIR__ . '/..' . '/roots/wp-config/src/Exceptions/UndefinedConfigKeyException.php',
-        'Routes' => __DIR__ . '/..' . '/upstatement/routes/Routes.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Polyfill\\Ctype\\Ctype' => __DIR__ . '/..' . '/symfony/polyfill-ctype/Ctype.php',
         'Symfony\\Polyfill\\Mbstring\\Mbstring' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/Mbstring.php',
         'Symfony\\Polyfill\\Php72\\Php72' => __DIR__ . '/..' . '/symfony/polyfill-php72/Php72.php',
         'Symfony\\Polyfill\\Php80\\Php80' => __DIR__ . '/..' . '/symfony/polyfill-php80/Php80.php',
         'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
-        'Timber\\Admin' => __DIR__ . '/..' . '/timber/timber/lib/Admin.php',
-        'Timber\\Archives' => __DIR__ . '/..' . '/timber/timber/lib/Archives.php',
-        'Timber\\Cache\\Cleaner' => __DIR__ . '/..' . '/timber/timber/lib/Cache/Cleaner.php',
-        'Timber\\Cache\\KeyGenerator' => __DIR__ . '/..' . '/timber/timber/lib/Cache/KeyGenerator.php',
-        'Timber\\Cache\\TimberKeyGeneratorInterface' => __DIR__ . '/..' . '/timber/timber/lib/Cache/TimberKeyGeneratorInterface.php',
-        'Timber\\Cache\\WPObjectCacheAdapter' => __DIR__ . '/..' . '/timber/timber/lib/Cache/WPObjectCacheAdapter.php',
-        'Timber\\Comment' => __DIR__ . '/..' . '/timber/timber/lib/Comment.php',
-        'Timber\\CommentThread' => __DIR__ . '/..' . '/timber/timber/lib/CommentThread.php',
-        'Timber\\Core' => __DIR__ . '/..' . '/timber/timber/lib/Core.php',
-        'Timber\\CoreInterface' => __DIR__ . '/..' . '/timber/timber/lib/CoreInterface.php',
-        'Timber\\FunctionWrapper' => __DIR__ . '/..' . '/timber/timber/lib/FunctionWrapper.php',
-        'Timber\\Helper' => __DIR__ . '/..' . '/timber/timber/lib/Helper.php',
-        'Timber\\Image' => __DIR__ . '/..' . '/timber/timber/lib/Image.php',
-        'Timber\\ImageHelper' => __DIR__ . '/..' . '/timber/timber/lib/ImageHelper.php',
-        'Timber\\Image\\Operation' => __DIR__ . '/..' . '/timber/timber/lib/Image/Operation.php',
-        'Timber\\Image\\Operation\\Letterbox' => __DIR__ . '/..' . '/timber/timber/lib/Image/Operation/Letterbox.php',
-        'Timber\\Image\\Operation\\Resize' => __DIR__ . '/..' . '/timber/timber/lib/Image/Operation/Resize.php',
-        'Timber\\Image\\Operation\\Retina' => __DIR__ . '/..' . '/timber/timber/lib/Image/Operation/Retina.php',
-        'Timber\\Image\\Operation\\ToJpg' => __DIR__ . '/..' . '/timber/timber/lib/Image/Operation/ToJpg.php',
-        'Timber\\Image\\Operation\\ToWebp' => __DIR__ . '/..' . '/timber/timber/lib/Image/Operation/ToWebp.php',
-        'Timber\\Integrations' => __DIR__ . '/..' . '/timber/timber/lib/Integrations.php',
-        'Timber\\Integrations\\ACF' => __DIR__ . '/..' . '/timber/timber/lib/Integrations/ACF.php',
-        'Timber\\Integrations\\CoAuthorsPlus' => __DIR__ . '/..' . '/timber/timber/lib/Integrations/CoAuthorsPlus.php',
-        'Timber\\Integrations\\CoAuthorsPlusUser' => __DIR__ . '/..' . '/timber/timber/lib/Integrations/CoAuthorsPlusUser.php',
-        'Timber\\Integrations\\Command' => __DIR__ . '/..' . '/timber/timber/lib/Integrations/Command.php',
-        'Timber\\Integrations\\Timber_WP_CLI_Command' => __DIR__ . '/..' . '/timber/timber/lib/Integrations/Timber_WP_CLI_Command.php',
-        'Timber\\Integrations\\WPML' => __DIR__ . '/..' . '/timber/timber/lib/Integrations/WPML.php',
-        'Timber\\Loader' => __DIR__ . '/..' . '/timber/timber/lib/Loader.php',
-        'Timber\\LocationManager' => __DIR__ . '/..' . '/timber/timber/lib/LocationManager.php',
-        'Timber\\Menu' => __DIR__ . '/..' . '/timber/timber/lib/Menu.php',
-        'Timber\\MenuItem' => __DIR__ . '/..' . '/timber/timber/lib/MenuItem.php',
-        'Timber\\Pagination' => __DIR__ . '/..' . '/timber/timber/lib/Pagination.php',
-        'Timber\\PathHelper' => __DIR__ . '/..' . '/timber/timber/lib/PathHelper.php',
-        'Timber\\Post' => __DIR__ . '/..' . '/timber/timber/lib/Post.php',
-        'Timber\\PostCollection' => __DIR__ . '/..' . '/timber/timber/lib/PostCollection.php',
-        'Timber\\PostGetter' => __DIR__ . '/..' . '/timber/timber/lib/PostGetter.php',
-        'Timber\\PostPreview' => __DIR__ . '/..' . '/timber/timber/lib/PostPreview.php',
-        'Timber\\PostQuery' => __DIR__ . '/..' . '/timber/timber/lib/PostQuery.php',
-        'Timber\\PostType' => __DIR__ . '/..' . '/timber/timber/lib/PostType.php',
-        'Timber\\PostsIterator' => __DIR__ . '/..' . '/timber/timber/lib/PostsIterator.php',
-        'Timber\\QueryIterator' => __DIR__ . '/..' . '/timber/timber/lib/QueryIterator.php',
-        'Timber\\Request' => __DIR__ . '/..' . '/timber/timber/lib/Request.php',
-        'Timber\\Site' => __DIR__ . '/..' . '/timber/timber/lib/Site.php',
-        'Timber\\Term' => __DIR__ . '/..' . '/timber/timber/lib/Term.php',
-        'Timber\\TermGetter' => __DIR__ . '/..' . '/timber/timber/lib/TermGetter.php',
-        'Timber\\TextHelper' => __DIR__ . '/..' . '/timber/timber/lib/TextHelper.php',
-        'Timber\\Theme' => __DIR__ . '/..' . '/timber/timber/lib/Theme.php',
-        'Timber\\Timber' => __DIR__ . '/..' . '/timber/timber/lib/Timber.php',
-        'Timber\\Twig' => __DIR__ . '/..' . '/timber/timber/lib/Twig.php',
-        'Timber\\Twig_Filter' => __DIR__ . '/..' . '/timber/timber/lib/Twig_Filter.php',
-        'Timber\\Twig_Function' => __DIR__ . '/..' . '/timber/timber/lib/Twig_Function.php',
-        'Timber\\URLHelper' => __DIR__ . '/..' . '/timber/timber/lib/URLHelper.php',
-        'Timber\\User' => __DIR__ . '/..' . '/timber/timber/lib/User.php',
-        'Twig\\CacheExtension\\CacheProviderInterface' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheProviderInterface.php',
-        'Twig\\CacheExtension\\CacheProvider\\DoctrineCacheAdapter' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheProvider/DoctrineCacheAdapter.php',
-        'Twig\\CacheExtension\\CacheProvider\\PsrCacheAdapter' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheProvider/PsrCacheAdapter.php',
-        'Twig\\CacheExtension\\CacheStrategyInterface' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheStrategyInterface.php',
-        'Twig\\CacheExtension\\CacheStrategy\\BlackholeCacheStrategy' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheStrategy/BlackholeCacheStrategy.php',
-        'Twig\\CacheExtension\\CacheStrategy\\GenerationalCacheStrategy' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheStrategy/GenerationalCacheStrategy.php',
-        'Twig\\CacheExtension\\CacheStrategy\\IndexedChainingCacheStrategy' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheStrategy/IndexedChainingCacheStrategy.php',
-        'Twig\\CacheExtension\\CacheStrategy\\KeyGeneratorInterface' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheStrategy/KeyGeneratorInterface.php',
-        'Twig\\CacheExtension\\CacheStrategy\\LifetimeCacheStrategy' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/CacheStrategy/LifetimeCacheStrategy.php',
-        'Twig\\CacheExtension\\Exception\\BaseException' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/Exception/BaseException.php',
-        'Twig\\CacheExtension\\Exception\\InvalidCacheKeyException' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/Exception/InvalidCacheKeyException.php',
-        'Twig\\CacheExtension\\Exception\\InvalidCacheLifetimeException' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/Exception/InvalidCacheLifetimeException.php',
-        'Twig\\CacheExtension\\Exception\\NonExistingStrategyException' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/Exception/NonExistingStrategyException.php',
-        'Twig\\CacheExtension\\Exception\\NonExistingStrategyKeyException' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/Exception/NonExistingStrategyKeyException.php',
-        'Twig\\CacheExtension\\Extension' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/Extension.php',
-        'Twig\\CacheExtension\\Node\\CacheNode' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/Node/CacheNode.php',
-        'Twig\\CacheExtension\\TokenParser\\Cache' => __DIR__ . '/..' . '/twig/cache-extension/lib/Twig/CacheExtension/TokenParser/Cache.php',
+        'Timber\\AccessesPostsLazily' => __DIR__ . '/..' . '/timber/timber/src/AccessesPostsLazily.php',
+        'Timber\\Admin' => __DIR__ . '/..' . '/timber/timber/src/Admin.php',
+        'Timber\\Archives' => __DIR__ . '/..' . '/timber/timber/src/Archives.php',
+        'Timber\\Attachment' => __DIR__ . '/..' . '/timber/timber/src/Attachment.php',
+        'Timber\\Cache\\Cleaner' => __DIR__ . '/..' . '/timber/timber/src/Cache/Cleaner.php',
+        'Timber\\Cache\\KeyGenerator' => __DIR__ . '/..' . '/timber/timber/src/Cache/KeyGenerator.php',
+        'Timber\\Cache\\TimberKeyGeneratorInterface' => __DIR__ . '/..' . '/timber/timber/src/Cache/TimberKeyGeneratorInterface.php',
+        'Timber\\Cache\\WPObjectCacheAdapter' => __DIR__ . '/..' . '/timber/timber/src/Cache/WPObjectCacheAdapter.php',
+        'Timber\\Comment' => __DIR__ . '/..' . '/timber/timber/src/Comment.php',
+        'Timber\\CommentThread' => __DIR__ . '/..' . '/timber/timber/src/CommentThread.php',
+        'Timber\\Core' => __DIR__ . '/..' . '/timber/timber/src/Core.php',
+        'Timber\\CoreEntity' => __DIR__ . '/..' . '/timber/timber/src/CoreEntity.php',
+        'Timber\\CoreEntityInterface' => __DIR__ . '/..' . '/timber/timber/src/CoreEntityInterface.php',
+        'Timber\\CoreInterface' => __DIR__ . '/..' . '/timber/timber/src/CoreInterface.php',
+        'Timber\\DateTimeHelper' => __DIR__ . '/..' . '/timber/timber/src/DateTimeHelper.php',
+        'Timber\\DatedInterface' => __DIR__ . '/..' . '/timber/timber/src/DatedInterface.php',
+        'Timber\\ExternalImage' => __DIR__ . '/..' . '/timber/timber/src/ExternalImage.php',
+        'Timber\\Factory\\CommentFactory' => __DIR__ . '/..' . '/timber/timber/src/Factory/CommentFactory.php',
+        'Timber\\Factory\\MenuFactory' => __DIR__ . '/..' . '/timber/timber/src/Factory/MenuFactory.php',
+        'Timber\\Factory\\MenuItemFactory' => __DIR__ . '/..' . '/timber/timber/src/Factory/MenuItemFactory.php',
+        'Timber\\Factory\\PagesMenuFactory' => __DIR__ . '/..' . '/timber/timber/src/Factory/PagesMenuFactory.php',
+        'Timber\\Factory\\PostFactory' => __DIR__ . '/..' . '/timber/timber/src/Factory/PostFactory.php',
+        'Timber\\Factory\\TermFactory' => __DIR__ . '/..' . '/timber/timber/src/Factory/TermFactory.php',
+        'Timber\\Factory\\UserFactory' => __DIR__ . '/..' . '/timber/timber/src/Factory/UserFactory.php',
+        'Timber\\FunctionWrapper' => __DIR__ . '/..' . '/timber/timber/src/FunctionWrapper.php',
+        'Timber\\Helper' => __DIR__ . '/..' . '/timber/timber/src/Helper.php',
+        'Timber\\Image' => __DIR__ . '/..' . '/timber/timber/src/Image.php',
+        'Timber\\ImageDimensions' => __DIR__ . '/..' . '/timber/timber/src/ImageDimensions.php',
+        'Timber\\ImageHelper' => __DIR__ . '/..' . '/timber/timber/src/ImageHelper.php',
+        'Timber\\ImageInterface' => __DIR__ . '/..' . '/timber/timber/src/ImageInterface.php',
+        'Timber\\Image\\Operation' => __DIR__ . '/..' . '/timber/timber/src/Image/Operation.php',
+        'Timber\\Image\\Operation\\Letterbox' => __DIR__ . '/..' . '/timber/timber/src/Image/Operation/Letterbox.php',
+        'Timber\\Image\\Operation\\Resize' => __DIR__ . '/..' . '/timber/timber/src/Image/Operation/Resize.php',
+        'Timber\\Image\\Operation\\Retina' => __DIR__ . '/..' . '/timber/timber/src/Image/Operation/Retina.php',
+        'Timber\\Image\\Operation\\ToJpg' => __DIR__ . '/..' . '/timber/timber/src/Image/Operation/ToJpg.php',
+        'Timber\\Image\\Operation\\ToWebp' => __DIR__ . '/..' . '/timber/timber/src/Image/Operation/ToWebp.php',
+        'Timber\\Integration\\AcfIntegration' => __DIR__ . '/..' . '/timber/timber/src/Integration/AcfIntegration.php',
+        'Timber\\Integration\\CLI\\TimberCommand' => __DIR__ . '/..' . '/timber/timber/src/Integration/CLI/TimberCommand.php',
+        'Timber\\Integration\\CoAuthorsPlusIntegration' => __DIR__ . '/..' . '/timber/timber/src/Integration/CoAuthorsPlusIntegration.php',
+        'Timber\\Integration\\CoAuthorsPlus\\CoAuthorsPlusUser' => __DIR__ . '/..' . '/timber/timber/src/Integration/CoAuthorsPlus/CoAuthorsPlusUser.php',
+        'Timber\\Integration\\IntegrationInterface' => __DIR__ . '/..' . '/timber/timber/src/Integration/IntegrationInterface.php',
+        'Timber\\Integration\\WpCliIntegration' => __DIR__ . '/..' . '/timber/timber/src/Integration/WpCliIntegration.php',
+        'Timber\\Integration\\WpmlIntegration' => __DIR__ . '/..' . '/timber/timber/src/Integration/WpmlIntegration.php',
+        'Timber\\Loader' => __DIR__ . '/..' . '/timber/timber/src/Loader.php',
+        'Timber\\LocationManager' => __DIR__ . '/..' . '/timber/timber/src/LocationManager.php',
+        'Timber\\Menu' => __DIR__ . '/..' . '/timber/timber/src/Menu.php',
+        'Timber\\MenuItem' => __DIR__ . '/..' . '/timber/timber/src/MenuItem.php',
+        'Timber\\MetaInterface' => __DIR__ . '/..' . '/timber/timber/src/MetaInterface.php',
+        'Timber\\PagesMenu' => __DIR__ . '/..' . '/timber/timber/src/PagesMenu.php',
+        'Timber\\Pagination' => __DIR__ . '/..' . '/timber/timber/src/Pagination.php',
+        'Timber\\PathHelper' => __DIR__ . '/..' . '/timber/timber/src/PathHelper.php',
+        'Timber\\Post' => __DIR__ . '/..' . '/timber/timber/src/Post.php',
+        'Timber\\PostArrayObject' => __DIR__ . '/..' . '/timber/timber/src/PostArrayObject.php',
+        'Timber\\PostCollectionInterface' => __DIR__ . '/..' . '/timber/timber/src/PostCollectionInterface.php',
+        'Timber\\PostExcerpt' => __DIR__ . '/..' . '/timber/timber/src/PostExcerpt.php',
+        'Timber\\PostQuery' => __DIR__ . '/..' . '/timber/timber/src/PostQuery.php',
+        'Timber\\PostType' => __DIR__ . '/..' . '/timber/timber/src/PostType.php',
+        'Timber\\PostsIterator' => __DIR__ . '/..' . '/timber/timber/src/PostsIterator.php',
+        'Timber\\Setupable' => __DIR__ . '/..' . '/timber/timber/src/Setupable.php',
+        'Timber\\Site' => __DIR__ . '/..' . '/timber/timber/src/Site.php',
+        'Timber\\Term' => __DIR__ . '/..' . '/timber/timber/src/Term.php',
+        'Timber\\TextHelper' => __DIR__ . '/..' . '/timber/timber/src/TextHelper.php',
+        'Timber\\Theme' => __DIR__ . '/..' . '/timber/timber/src/Theme.php',
+        'Timber\\Timber' => __DIR__ . '/..' . '/timber/timber/src/Timber.php',
+        'Timber\\Twig' => __DIR__ . '/..' . '/timber/timber/src/Twig.php',
+        'Timber\\URLHelper' => __DIR__ . '/..' . '/timber/timber/src/URLHelper.php',
+        'Timber\\User' => __DIR__ . '/..' . '/timber/timber/src/User.php',
         'Twig\\Cache\\CacheInterface' => __DIR__ . '/..' . '/twig/twig/src/Cache/CacheInterface.php',
         'Twig\\Cache\\FilesystemCache' => __DIR__ . '/..' . '/twig/twig/src/Cache/FilesystemCache.php',
         'Twig\\Cache\\NullCache' => __DIR__ . '/..' . '/twig/twig/src/Cache/NullCache.php',
@@ -516,6 +500,7 @@ class ComposerStaticInitf490dc0e996e7236a6407851f494d012
         'Twig\\Sandbox\\SecurityNotAllowedTagError' => __DIR__ . '/..' . '/twig/twig/src/Sandbox/SecurityNotAllowedTagError.php',
         'Twig\\Sandbox\\SecurityPolicy' => __DIR__ . '/..' . '/twig/twig/src/Sandbox/SecurityPolicy.php',
         'Twig\\Sandbox\\SecurityPolicyInterface' => __DIR__ . '/..' . '/twig/twig/src/Sandbox/SecurityPolicyInterface.php',
+        'Twig\\Sandbox\\SourcePolicyInterface' => __DIR__ . '/..' . '/twig/twig/src/Sandbox/SourcePolicyInterface.php',
         'Twig\\Source' => __DIR__ . '/..' . '/twig/twig/src/Source.php',
         'Twig\\Template' => __DIR__ . '/..' . '/twig/twig/src/Template.php',
         'Twig\\TemplateWrapper' => __DIR__ . '/..' . '/twig/twig/src/TemplateWrapper.php',
@@ -732,11 +717,10 @@ class ComposerStaticInitf490dc0e996e7236a6407851f494d012
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf490dc0e996e7236a6407851f494d012::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf490dc0e996e7236a6407851f494d012::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInitf490dc0e996e7236a6407851f494d012::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitf490dc0e996e7236a6407851f494d012::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitf490dc0e996e7236a6407851f494d012::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit4bd367d0af823009ad96fac2d8aa91a1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit4bd367d0af823009ad96fac2d8aa91a1::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit4bd367d0af823009ad96fac2d8aa91a1::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit4bd367d0af823009ad96fac2d8aa91a1::$classMap;
 
         }, null, ClassLoader::class);
     }

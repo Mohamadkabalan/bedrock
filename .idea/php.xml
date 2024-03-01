@@ -14,9 +14,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
       <path value="$PROJECT_DIR$/vendor/oscarotero/env" />
-      <path value="$PROJECT_DIR$/vendor/upstatement/routes" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
-      <path value="$PROJECT_DIR$/vendor/altorouter/altorouter" />
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/timber/timber" />
       <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
@@ -24,7 +22,6 @@
       <path value="$PROJECT_DIR$/vendor/roots/wp-password-bcrypt" />
       <path value="$PROJECT_DIR$/vendor/roots/bedrock-autoloader" />
       <path value="$PROJECT_DIR$/vendor/roots/wordpress-core-installer" />
-      <path value="$PROJECT_DIR$/vendor/twig/cache-extension" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
     </include_path>
   </component>

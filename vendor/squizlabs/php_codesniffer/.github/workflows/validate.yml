@@ -7,10 +7,14 @@ on:
     paths-ignore:
       - '**.md'
   pull_request:
-    paths-ignore:
-      - '**.md'
   # Allow manually triggering the workflow.
   workflow_dispatch:
+
+# Cancels all previous workflow runs for the same branch that have not yet completed.
+concurrency:
+  # The concurrency group contains the workflow name and the branch name.
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   checkxml:
@@ -22,7 +26,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install xmllint
         run: |
@@ -34,7 +38,8 @@ jobs:
 
       # Show XML violations inline in the file diff.
       # @link https://github.com/marketplace/actions/xmllint-problem-matcher
-      - uses: korelstar/xmllint-problem-matcher@v1
+      - name: Enable showing XML issues inline
+        uses: korelstar/xmllint-problem-matcher@v1
 
       # Validate the XML ruleset files.
       # @link http://xmlsoft.org/xmllint.html
@@ -59,22 +64,17 @@ jobs:
           diff -B ./src/Standards/Squiz/ruleset.xml <(xmllint --format "./src/Standards/Squiz/ruleset.xml")
           diff -B ./src/Standards/Zend/ruleset.xml <(xmllint --format "./src/Standards/Zend/ruleset.xml")
 
-  pear:
-    name: "PHP: 7.4 | PEAR package validation"
+  yamllint:
+    name: 'Lint Yaml'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Install PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-          coverage: none
+      - name: Run Yamllint on all yaml files in repo
+        run: yamllint . --format colored --strict
 
-      - name: Validate the PEAR package file contents
-        run: php scripts/validate-pear-package.php
-
-      - name: Validate the PEAR package
-        run: pear package-validate package.xml
+      - name: Pipe Yamllint results on to GH for inline display
+        if: ${{ failure() }}
+        run: yamllint . --format github --strict
